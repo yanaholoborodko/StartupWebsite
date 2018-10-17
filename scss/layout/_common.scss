@@ -1,0 +1,498 @@
+.navbar{
+    background: black!important;
+    .navbar-brand{
+        img{
+            width: 80px;
+            height: 15px;
+        }
+    }
+    li{
+        a{
+            background: none!important;
+            color: gray;
+            &:hover span{
+                border: 1px solid gray;
+                padding: 5px;
+                color: gray;
+                border-radius: 10%;
+            }
+        }
+    }
+    .active-main{       
+        color: aqua;
+        border: 1px solid aqua;
+        padding: 5px;
+        border-radius: 10%;  
+    }
+    .carousel-indicators {
+        left: 80%!important;
+        width: 10%!important ; 
+        margin-left: 0!important;
+    }
+    .item{
+        background-image: url(../sourceimages/header.png) ;
+        height: 560px;
+        width: 100%;   
+        div{
+            padding: 10% 0 0 0;
+            margin: 0 25% 0 25%;
+            max-width: 63%;
+            @include media ("<=345px"){
+                margin: 0 15% 0 15%;
+            }
+        }
+        h2{
+            text-transform: uppercase;
+            color: white;
+            margin: 0 1% 0 1%;
+            padding: 0 0 3% 0;
+                
+        }
+        p{
+            color: gray;
+            margin: 0 1% 0 1%;
+            padding: 0 0 3% 0;
+        }
+        button{
+            padding: 5px 15px 5px 15px;
+            margin: 0% 1% 0 1%;
+            font-size: 14px;
+            text-transform: uppercase;
+            border: 1px solid white;
+            background: none;
+            border-radius: 10%;
+            color: white;
+            @include media ("<=497px"){
+                margin: 4% 1% 0 1%;
+            }
+        }
+        button:hover{
+            background: aqua;
+            border: 1px solid aqua;
+        }
+    }
+    .navbar-toggle{
+        border: 1px solid white!important;
+        .icon-bar{
+            background: white;
+        }
+    }    
+}
+
+.modest{
+    h2{ 
+        padding: 20px 0 20px 0;
+        margin: 0 20px 0 20px;
+        span{
+            border-left: 10px solid rgb(225, 230, 234);
+            padding: 0 0 0 10px;
+            text-transform: uppercase;
+        }
+    }
+    p{
+        padding: 0 0 20px 0;
+    }
+    .col-lg-6 > div > ul{
+        list-style-type: none;
+        display: flex;
+        margin: 0px;
+        padding: 0 0 20px 0;
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+    .Number{
+        ul{
+            margin: 0px;
+            padding: 0px;
+            li{
+                display: flex;
+                align-items: flex-start;
+                padding: 0 0 15px 0;
+                h5{
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    margin: 0px;
+                    padding: 0 0 15px 0;
+                }
+                img{
+                    padding: 0 15px 0 0;
+                }
+            }
+        }
+    }
+}
+
+.team{
+    border-top: 1px solid gray;
+    h2{
+        padding: 40px 0 40px 0;
+        margin: 0 20px 0 20px;
+        span{
+            border-left: 10px solid rgb(225, 230, 234);
+            padding: 0 0 0 10px;
+            text-transform: uppercase;
+        }
+    }
+    ul{
+        list-style-type: none;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin: 0px;
+        padding: 0 0 10% 5px;
+        li{
+            padding: 0 0 10px 0;
+            position: relative;
+            @include media("<=768px"){
+            max-width: 49%;
+            } 
+            .team-detail{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                opacity: 0;
+                transition: all 1.25s;
+                padding: 50% 0 0 0;
+                img{
+                    height: auto;
+                    width: 20%;               
+                }
+            }
+            &:hover .team-detail{
+                opacity: 1;
+                background-color: rgba(255, 255, 255, 0.4); 
+            }
+            &:hover .team-bg{
+                background-color: rgb(58, 69, 77);        
+            }
+            &:hover .team-bg > h4{
+                color: white;
+            }
+            &:hover .team-bg > p{
+                color: white;
+            }
+            img{
+                width: 100%;
+                height: auto;  
+            }   
+            .team-bg{
+                padding: 5px 0 20px 0;
+                transition: all 1.25s;                
+                background-color: rgb(225, 230, 234);
+
+                h4{
+                    padding: 0 0 0 15px;
+                    font-family: "QuattrocentoSans";
+                    color: rgb(41, 47, 54);
+                    text-transform: uppercase;
+                }
+                p{
+                    padding: 0 0 0 15px;
+                    font-size: 14px;
+                    font-family: "Open Sans";
+                    color: rgb(141, 143, 146);
+                }
+            }
+        }
+    }
+}
+
+.work{
+    background-color: rgb(58, 69, 77);
+    
+    h2{
+        padding: 40px 0 40px 0;
+        margin: 0 20px 0 20px;
+        span{
+            border-left: 10px solid rgb(78, 90, 98);
+            color: white;
+            padding: 0 0 0 10px;
+            text-transform: uppercase;
+        }
+    }
+    ul{
+        list-style-type: none;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin: 0px;
+        padding: 0 0 0 5px;
+        li{
+            margin: 0 0 1.5% 0;
+            position: relative;
+            @include media("<=991px"){
+            max-width: 49%;
+            }
+            img{
+                max-width: 100%;
+                height: auto;
+            } 
+            .work-detail{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                opacity: 0;
+                transition: all 1.25s;
+                background-color: rgba(41, 47, 54,0.502);
+                img{
+                    height: 20px;
+                    width: 20px;
+                }
+                .work-detail2{
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    padding: 4% 0 1% 5%;
+                    width: 100%;
+                    font-size: 16px;
+                    font-family: "QuattrocentoSans";
+                    color: rgb(255, 255, 255);
+                    text-transform: uppercase;
+                    background-color: rgb(41, 47, 54);
+                    p{
+                        float: left;
+                    }
+                }
+            }
+            &:hover .work-detail{
+                opacity: 1;
+            }
+        }
+    }
+    .work-btn{
+        text-align: center;
+        padding: 20px 0 40px 0;
+        button{
+            border: 2px solid rgb(255, 255, 255);
+            border-radius: 3px;
+            background-color: rgba(222, 180, 180, 0);
+            padding: 0.5% 1% 0.5% 1%;
+            text-transform: uppercase;
+            font-size: 12px;
+            font-family: "QuattrocentoSans";
+            color: rgb(255, 255, 255);
+        }
+    }
+}
+
+.what-we-do{
+    h2{
+        padding: 40px 0 40px 0;
+        margin: 0 20px 0 20px;
+        span{
+            border-left: 10px solid rgb(225, 230, 234);
+            padding: 0 0 0 10px;
+            text-transform: uppercase;
+        }
+    }   
+    ul{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        list-style-type: none;
+        margin: 0 0 5% 0;
+        padding: 0px;
+        li{
+            text-align: center;
+            max-width: 25%;
+            @include media("<=644px"){
+                max-width: 50%;
+            } 
+            @include media("<=400px"){
+                max-width: 100%;
+            }
+            padding: 3% 1% 3% 1%;
+            h5{
+                font-size: 16px;
+                font-family: "QuattrocentoSans";
+                color: rgb(41, 47, 54);
+                font-weight: bold;
+                text-transform: uppercase;
+                padding: 10% 0 2% 0;
+            }
+            p{
+                font-size: 14px;
+                font-family: "Open Sans";
+                color: rgb(141, 143, 146);
+                line-height: 1.625;
+            }
+        }
+    }
+}
+
+.features{
+    background-color: rgb(58, 69, 77);
+    h2{
+        padding: 40px 0 40px 0;
+        margin: 0 20px 0 20px;
+        span{
+            border-left: 10px solid rgb(78, 90, 98);
+            color: white;
+            padding: 0 0 0 10px;
+            text-transform: uppercase;
+        }
+    }
+    ul{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin: 0px;
+        padding: 0px;
+        li{
+            @include media("<=629px"){
+                min-width: 100%;
+                text-align: center;
+            }
+            width: 33%;
+            padding: 0 1% 0 1%;
+            img{
+                max-width: 100%;
+                height: auto;
+            }
+            h5{
+                font-size: 16px;
+                font-family: "QuattrocentoSans";
+                color: rgb(255, 255, 255);
+                text-transform: uppercase;
+                padding: 8% 0 3% 0;
+            }
+            p{
+                font-size: 14px;
+                font-family: "Open Sans";
+                color: rgb(220, 223, 225);
+                line-height: 1.625;
+                padding: 0 0 5% 0;
+            }
+        }
+    }
+
+}
+
+.map{
+    h2{
+        padding: 40px 0 40px 0;
+        margin: 0 20px 0 20px;
+        span{
+            border-left: 10px solid rgb(225, 230, 234);
+            padding: 0 0 0 10px;
+            text-transform: uppercase;
+        }
+    }
+    .map-inform{
+        @include media ("<=829px"){
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            p{
+                width: 100%!important;
+            }
+            margin: 0 20px 0 20px;
+        }
+        padding: 0 0 5% 0;
+        h4{
+            font-size: 20px;
+            font-family: "QuattrocentoSans";
+            color: rgb(41, 47, 54);
+            text-transform: uppercase;
+            padding: 15px 0 15px 0;
+            margin: 0 15px 0 15px;
+        }
+        p{
+          width: 50%;
+          font-size: 16px;
+          font-family: "Open Sans";
+          color: rgb(141, 143, 146);
+          line-height: 1.625;
+          padding: 0 0 2% 0;
+        }
+    }
+}
+  
+.form{
+    position: relative;
+    @include media ("<=829px"){
+        display: none;
+    }
+    div{
+        position: absolute;
+        right: 0%;
+        bottom: 0;
+        height: 400px;
+        width: 400px;
+        border-radius: 3px;
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        flex-direction: column;
+        ul{
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            margin: 0px;
+            padding: 0px;
+            li{
+                padding: 5% 0 0 2%;
+                p{
+                    font-size: 14px;
+                    font-family: "QuattrocentoSans";
+                    color: rgb(141, 143, 146);
+                    text-transform: uppercase;
+                }
+                input{
+                    width: 100%;
+                    height: 60%;
+                    border: 0px solid ;
+                    border-radius: 3px;
+                    background-color: rgb(234, 238, 241);
+                }
+            }
+        }
+        p{
+            font-size: 14px;
+            font-family: "QuattrocentoSans";
+            color: rgb(141, 143, 146);
+            text-transform: uppercase;
+            padding: 10% 0 0 8%;
+        }
+        textarea{
+            margin: 0 0 0 5%;
+            background-color: rgb(234, 238, 241);
+            border: 0 solid;
+            width: 93%;
+            min-width: 93%;
+            max-width: 93%;
+            height: 159px;
+            min-height: 159px;
+            max-height: 159px;
+            border-radius: 3%;
+        }
+    }  
+}
+
+#footer{
+    background-color: rgb(58, 69, 77);
+    padding: 3% 0 2% 0;
+    .cop{
+        float: left;
+        font-size: 14px;
+        font-family: "Open Sans";
+        color: rgb(255, 255, 255);
+    }
+    .icons{
+        float: right;
+        a{
+            font-size: 16px;
+            font-family: "Socialico";
+            color: rgb(255, 255, 255);
+            padding: 0 0 0 20px;
+        }
+    }
+}
